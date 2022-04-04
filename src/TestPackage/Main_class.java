@@ -11,8 +11,6 @@ public class Main_class {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Andrés Diaz\\eclipse-workspace\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://www.google.com.ar");
-		driver.manage().window().maximize();
 		
 	}
 
