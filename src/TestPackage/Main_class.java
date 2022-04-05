@@ -22,7 +22,9 @@ public class Main_class {
 			Thread.sleep(2000);
 			
 			//driver.findElement(By.id("n-randompage")).click();
-			driver.findElement(By.linkText("Página aleatoria")).click();
+			//driver.findElement(By.linkText("Página aleatoria")).click();
+			driver.findElement(By.tagName("title"));
+			
 			
 			Thread.sleep(2000);
 			
