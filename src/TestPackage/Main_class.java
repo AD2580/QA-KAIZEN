@@ -21,7 +21,8 @@ public class Main_class {
 			
 			Thread.sleep(2000);
 			
-			driver.findElement(By.id("n-randompage")).click();
+			//driver.findElement(By.id("n-randompage")).click();
+			driver.findElement(By.linkText("Página aleatoria")).click();
 			
 			Thread.sleep(2000);
 			
