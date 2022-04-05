@@ -9,16 +9,27 @@ public class Main_class {
 
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Andrés Diaz\\eclipse-workspace\\drivers\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Andrés Diaz\\eclipse-workspace\\drivers\\chromedriver.exe");
+		
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://www.google.com.ar");
-		driver.manage().window().maximize();
 		
 		try {
-			Thread.sleep(7000);
-		} catch (InterruptedException e) {
+			
+			driver.get("http://wikipedia.com.ar");
+			driver.manage().window().maximize();
+			
+			Thread.sleep(5000);
+			
+			String titulo = driver.getTitle();
+			
+			System.out.println(titulo);
+			
+			
+		}catch(Exception e) {
 			e.printStackTrace();
-		}
-		driver.quit();
+		}finally {
+			driver.quit();
+	}	
+		
 	}
 }
