@@ -1,6 +1,7 @@
 //Create the project
 
 package TestPackage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -18,7 +19,11 @@ public class Main_class {
 			driver.get("http://wikipedia.com.ar");
 			driver.manage().window().maximize();
 			
-			Thread.sleep(5000);
+			Thread.sleep(2000);
+			
+			driver.findElement(By.id("n-randompage")).click();
+			
+			Thread.sleep(2000);
 			
 			String titulo = driver.getTitle();
 			
