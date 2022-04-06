@@ -25,13 +25,11 @@ public class Main_class {
 			//By.id ----- //driver.findElement(By.id("n-randompage")).click();
 			//By.linkText ------ //driver.findElement(By.linkText("Página aleatoria")).click();
 			//By.tagName ----- //driver.findElement(By.tagName("title"));
-			WebElement leerButton = driver.findElement(By.xpath("//*[@id=\"main-tfa\"]//*[text() = \" Todos los artículos destacados \" ]"));
+			//By.xpath ----- //WebElement leerButton = driver.findElement(By.xpath("//*[@id=\"main-tfa\"]//*[text() = \" Todos los artículos destacados \" ]"));
 			
-			leerButton.click();
+			WebElement contenidoP = driver.findElement(By.cssSelector("div#main-tfa>p:nth-of-type(2)"));
 			
-			Thread.sleep(2000);
-			
-			System.out.println(driver.getTitle());
+			System.out.println(contenidoP.getText());
 			
 			
 		}catch(Exception e) {
