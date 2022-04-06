@@ -3,6 +3,7 @@
 package TestPackage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
@@ -21,16 +22,16 @@ public class Main_class {
 			
 			Thread.sleep(2000);
 			
-			//driver.findElement(By.id("n-randompage")).click();
-			//driver.findElement(By.linkText("Página aleatoria")).click();
-			driver.findElement(By.tagName("title"));
+			//By.id ----- //driver.findElement(By.id("n-randompage")).click();
+			//By.linkText ------ //driver.findElement(By.linkText("Página aleatoria")).click();
+			//By.tagName ----- //driver.findElement(By.tagName("title"));
+			WebElement leerButton = driver.findElement(By.xpath("//*[@id=\"main-tfa\"]//*[text() = \" Todos los artículos destacados \" ]"));
 			
+			leerButton.click();
 			
 			Thread.sleep(2000);
 			
-			String titulo = driver.getTitle();
-			
-			System.out.println(titulo);
+			System.out.println(driver.getTitle());
 			
 			
 		}catch(Exception e) {
